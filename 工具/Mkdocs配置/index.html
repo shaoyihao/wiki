@@ -70,6 +70,8 @@
   
     
     
+      
+    
     
     
     
@@ -123,7 +125,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -238,9 +266,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SYH&#39;s wiki" class="md-nav__button md-logo" aria-label="SYH's wiki" data-md-component="logo">
       
@@ -479,6 +505,101 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本使用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      转化为静态网页项目
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      部署至github page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      一般做法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      markdown 扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="markdown 扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学公式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -487,45 +608,50 @@
                   
 
 
-<hr />
-<hr />
-<h1 id="mkdocs">MkDocs的使用</h1>
+<h1 id="mkdocs">MkDocs的使用<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h1>
 <p><a href="https://www.mkdocs.org/getting-started/">MkDocs</a>（<strong>M</strong>ar<strong>k</strong>down <strong>Doc</strong>ument<strong>s</strong>）是一个快速、简单的静态网站生成器。文档源文件采用 Markdown 编写，且只需单个 YAML 配置文件进行配置，另外还有第三方主题和插件可以进行扩展。</p>
-<h2 id="_1">安装</h2>
-<pre><code class="language-sh">pip install mkdocs
-</code></pre>
-<h2 id="_2">基本使用</h2>
-<pre><code class="language-sh">mkdocs new myProject      # 创建一个Mkdocs项目
-cd myProject
-# 另一种方法：
-# mkdir myProject 
-# cd myProject
-# mkdocs new .
-</code></pre>
+<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+</code></pre></div></td></tr></table></div>
+<h2 id="_2">基本使用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>myProject<span class="w">      </span><span class="c1"># 创建一个Mkdocs项目</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>myProject
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># 另一种方法：</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># mkdir myProject </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># cd myProject</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1"># mkdocs new .</span>
+</code></pre></div></td></tr></table></div>
 <p>MkDocs 带有一个内置的开发服务器，可以实现在处理文档时实时预览文档，并且还支持自动重新加载，并且只要配置文件、文档目录或主题目录中的任何内容发生更改，就会重新构建文档。</p>
-<pre><code class="language-sh">mkdocs serve              # 本地测试
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>mkdocs<span class="w"> </span>serve<span class="w">              </span><span class="c1"># 本地测试</span>
+</code></pre></div></td></tr></table></div>
 <p>若要使用 <a href="https://squidfunk.github.io/mkdocs-material/">material</a> 主题，需：</p>
 <ol>
 <li>
 <p>下载该主题</p>
-<p><code>sh
-pip install mkdocs-material</code></p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>修改配置文件 <code>mkdocs.yaml</code>：</p>
-<p><code>yaml
-site_name: XXX
-theme:
-  name: material</code></p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">XXX</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+</code></pre></div></td></tr></table></div>
 </li>
 </ol>
 <p>Mkdocs 项目文件夹下的 docs 中存放着所有 Markdown 文件，我们也可根据自己的需要进一步用文件夹归类划分。<code>docs</code> 是 MkDocs 运行时默认的<strong>根路径</strong>，该目录下必须要有一个 <code>index.md</code> 文件，它是整个 MkDocs 构建的首页入口。</p>
-<h2 id="_3">转化为静态网页项目</h2>
-<pre><code class="language-sh">mkdocs build
-</code></pre>
+<h2 id="_3">转化为静态网页项目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>mkdocs<span class="w"> </span>build
+</code></pre></div></td></tr></table></div>
 <p>执行该命令后将生成一个 <code>site</code> 文件夹，其中即包含了整个网站的文件（静态 HTML 文件、CSS、JavaScript 和其他资源），将该文件夹下的内容上传至 github、云服务器、...等即可实现部署。</p>
-<h2 id="github-page">部署至github page</h2>
+<h2 id="github-page">部署至github page<a class="headerlink" href="#github-page" title="Permanent link">&para;</a></h2>
 <p>若要部署到 github page，Mkdocs 提供了简便的方法。</p>
 <p>基本步骤为：</p>
 <ol>
@@ -534,19 +660,20 @@ theme:
 </li>
 <li>
 <p>将该项目（此处以wiki为例） clone 到本地：</p>
-<p><code>sh
-git clone https://github.com/shaoyihao/wiki.git</code></p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/shaoyihao/wiki.git
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>以该文件夹作为Mkdocs项目</p>
-<p><code>sh
-cd wiki
-mkdocs new .</code></p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>wiki
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>.<span class="w">       </span>
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>一键部署到 github page：</p>
-<p><code>sh
-mkdocs gh-deploy</code></p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></td></tr></table></div>
 <blockquote>
 <p>注意到，这里与我们前文所提的“将 <code>site</code> 文件夹”上传到远端以实现部署不同。此处根本无需执行 <code>mkdocs build</code>，项目中也根本没有 <code>site</code> 文件夹，直接执行 <code>mkdocs gh-deploy</code> 即可。</p>
 <p>但通过查看 github 中所存储的文件可以发现，github 上所存的正是 <code>site</code> 中的文件！  How？</p>
@@ -559,32 +686,97 @@ mkdocs gh-deploy</code></p>
 </blockquote>
 </li>
 </ol>
-<h2 id="_4">一般做法</h2>
+<h2 id="_4">一般做法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>在本地进行文件的编辑、实时预览，最终再将文件推送到 github。在推送时无需将 <code>site</code> 文件夹也提交，因此可将其添加到 <code>.gitignore</code> 中。</p>
-<pre><code class="language-sh">echo &quot;site/&quot; &gt;&gt; .gitignore
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;site/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+</code></pre></div></td></tr></table></div>
 <p>文件被删除后仍将驻留在 <code>site</code> 中，要删除那些陈旧的文件，只需在执行命令时带上 <code>--clean</code> 参数即可。</p>
-<pre><code class="language-sh">mkdocs build --clean
-</code></pre>
-<h2 id="markdown">markdown 扩展</h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--clean
+</code></pre></div></td></tr></table></div>
+<h2 id="markdown">markdown 扩展<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h2>
 <p>MkDocs 使用 <a href="https://github.com/Python-Markdown/markdown">Python-Markdown</a> 库（Markdown 规范的 Python 实现）来渲染 Markdown 内容，因此我们可以在 Python-Markdown 的 <a href="https://python-markdown.github.io/extensions/">官方文档</a> 中浏览到目前所支持的 Markdown 扩展有哪些。</p>
-<pre><code class="language-sh">pip install pymdown-extensions
-</code></pre>
-<h3 id="_5">数学公式</h3>
-<pre><code class="language-yaml">markdown_extensions:
-  - pymdownx.arithmatex
-extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-</code></pre>
-<h1 id="material">Material 主题配置</h1>
-<h3 id="_6">标注</h3>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pymdown-extensions
+</code></pre></div></td></tr></table></div>
+<h3 id="_5">数学公式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.arithmatex</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nt">extra_javascript</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h1 id="material">Material 主题配置<a class="headerlink" href="#material" title="Permanent link">&para;</a></h1>
+<h3 id="_6">标注<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="admonition xxx">
 <p class="admonition-title">Xxx</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod</p>
 </div>
 <p>支持的类型有 <code>note</code>（默认）、<code>abstract</code>、<code>info</code>、<code>tip</code>、<code>success</code>、<code>question</code>、<code>warning</code>、<code>failure</code>、<code>danger</code>、<code>bug</code>、<code>example</code>、<code>quote</code>。</p>
+<details class="可折叠">
+<summary>可折叠</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod</p>
+</details>
+<h3 id="_7">分组<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">代码一</label><label for="__tabbed_1_2">代码二</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <hr />
-<h1 id="_7">参考</h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">分组一</label><label for="__tabbed_2_2">分组二</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>aaaaaaaa</p>
+</div>
+<div class="tabbed-block">
+<p>bbbbbbb</p>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition 嵌套">
+<p class="admonition-title">嵌套</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">分组一</label><label for="__tabbed_3_2">分组二</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>aaaaaaaaa</p>
+</div>
+<div class="tabbed-block">
+<p>bbbbbbbb</p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<h1 id="_8">参考<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://www.mkdocs.org/">mkdocs 官网</a></li>
 <li><a href="https://hellowac.github.io/mkdocs-docs-zh/">mkdocs 中文文档</a></li>
@@ -598,6 +790,9 @@ extra_javascript:
 
 
 
+  
+  
+
 
 
   
@@ -607,7 +802,7 @@ extra_javascript:
   <form class="md-feedback" name="feedback" hidden>
     <fieldset>
       <legend class="md-feedback__title">
-        Was this page helpful?
+        这篇文章对你有帮助吗？
       </legend>
       <div class="md-feedback__inner">
         <div class="md-feedback__list">
@@ -628,7 +823,7 @@ extra_javascript:
               
                 
               
-              Thanks for your feedback!
+              谢谢你！
             </div>
           
             <div data-md-value="0" hidden>
@@ -636,7 +831,7 @@ extra_javascript:
               
                 
               
-              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+              感谢你的反馈！
             </div>
           
         </div>
@@ -672,9 +867,19 @@ extra_javascript:
     </div>
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/shaoyihao" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
     </a>
   
 </div>
@@ -691,12 +896,16 @@ extra_javascript:
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "toc.integrate", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
