@@ -1,13 +1,13 @@
 window.MathJax = {
   loader: {
-    load: ['[tex]/physics']
+    load: ['[tex]/physics', '[tex]/mathtools']
   },
   tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
     processEnvironments: true,
-    packages: {'[+]': ['physics']}
+    packages: {'[+]': ['physics', 'mathtools']}
   },
   options: {
     ignoreHtmlClass: ".*|",
