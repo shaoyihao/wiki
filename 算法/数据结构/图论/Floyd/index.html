@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../dijkstra/">
+        <link rel="prev" href="../%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E6%B1%82%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF/">
       
       
         <link rel="next" href="../../../%E5%88%86%E6%B2%BB/%E6%A6%82%E8%BF%B0/">
@@ -72,6 +72,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -449,6 +454,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -1728,6 +1735,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E6%B1%82%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基于矩阵乘法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1738,6 +1766,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Floyd
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1747,6 +1786,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      输出最短路
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简化代码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1846,7 +1920,7 @@
     
   
   
-    <a href="../../../%E6%90%9C%E7%B4%A2/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="md-nav__link">
+    <a href="../../../%E6%90%9C%E7%B4%A2/%E9%98%B6%E4%B9%98%E7%9A%84%E5%92%8C/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2977,7 +3051,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2986,6 +3062,32 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      输出最短路
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简化代码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3002,7 +3104,101 @@
 
   <h1>Floyd</h1>
 
-<p>任意两点之间的最短距离</p>
+<p>Floyd-Warshall 算法也是一种<strong>动态规划</strong>算法，考虑的是一条最短路径上的<strong>中间结点</strong>。</p>
+<blockquote>
+<p>简单路径 <span class="arithmatex">\(p= \langle v_i,v_{i+1},...,v_j\rangle\)</span> 上的中间结点指的是路径 <span class="arithmatex">\(p\)</span> 上除 <span class="arithmatex">\(v_i\)</span> 和 <span class="arithmatex">\(v_j\)</span> 之外的任意结点，也就是处于集合 <span class="arithmatex">\(\{v_{i+1},...,v_{j-1}\}\)</span> 中的结点。</p>
+</blockquote>
+<p>令 <strong><span class="arithmatex">\(f(i,j,k)\)</span> 表示 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的所有中间结点全部取自集合 <span class="arithmatex">\(\{1, 2, ...,k\}\)</span>​ 的最短路径的距离</strong>。初始情况（没有中间结点）：<span class="arithmatex">\(f(i,j,0)=w_{i,j}\)</span> 。</p>
+<p>令 <span class="arithmatex">\(p\)</span> 为从 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 且中间结点均取自集合 <span class="arithmatex">\(\{ 1, 2, ..., k\}\)</span> 的所有路径中的最短路径，<span class="arithmatex">\(q\)</span> 为从 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 且中间结点均取自集合 <span class="arithmatex">\(\{1, 2, ..., k-1\}\)</span> 的所有路径中的最短路径，下面讨论 <span class="arithmatex">\(p,q\)</span> 之间的关系：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(k\)</span> 不在路径 <span class="arithmatex">\(p\)</span> 上时，则 <span class="arithmatex">\(p,q\)</span> 相同，即 <span class="arithmatex">\(p\)</span> 就是 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 中间结点全部取自 <span class="arithmatex">\(\{1, 2, ..., k-1\}\)</span>​ 的最短路径。</p>
+<div class="arithmatex">\[
+f(i,j,k)=f(i,j,k-1)
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(k\)</span> 在路径 <span class="arithmatex">\(p\)</span> 上时，则 <span class="arithmatex">\(p\)</span> 可表示为 <span class="arithmatex">\(i\leadsto k\leadsto j\)</span>，可得 <span class="arithmatex">\(i\leadsto k\)</span> 是 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(k\)</span> 中间结点全部取自 <span class="arithmatex">\(\{1, 2, ..., k-1\}\)</span> 的最短路径，<span class="arithmatex">\(k\leadsto j\)</span> 是 <span class="arithmatex">\(k\)</span> 到 <span class="arithmatex">\(j\)</span> 中间结点全部取自 <span class="arithmatex">\(\{1, 2, ..., k-1\}\)</span>​​ 的最短路径。</p>
+<div class="arithmatex">\[
+f(i,j,k)=f(i,k,k-1)+f(k,j,k-1)
+\]</div>
+</li>
+</ul>
+<p>因此：</p>
+<div class="arithmatex">\[
+f(i,j,k)=\min\{f(i,j,k-1),\ \  f(i,k,k-1)+f(k,j,k-1)\}\ \ \ \ \ \ \ \ (k\ge 1)
+\]</div>
+<p>最终 <span class="arithmatex">\(i,j\)</span> 之间最短路的距离即：<span class="arithmatex">\(\delta(i,j)=f(i,j,n)\)</span> 。</p>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span><span class="w">    </span><span class="c1">// 初始化</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度为 <span class="arithmatex">\(\Theta(n^3)\)</span>，且常数较小。</p>
+<h2 id="_1">输出最短路<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<figure>
+    <img src="../img/094974404685483287124402177c3884.png" alt="img" style="zoom:30%;" />
+    <caption></caption>
+</figure>
+
+<p><strong>用数组元素 <span class="arithmatex">\(π[i][j][k]\)</span> 记录 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 中间结点全部取自集合 <span class="arithmatex">\(\{1, 2, ..., k\}\)</span> 的最短路径中 <span class="arithmatex">\(j\)</span> 的前驱结点</strong>。</p>
+<ul>
+<li>
+<p>初始情况（无中间结点）：</p>
+<div class="arithmatex">\[
+\pi[i][j][0]=\left\{\begin{matrix} i,\ \ &amp;w_{ij}\ne\infty \\\text{null},&amp;w_{ij}=\infty\\\text{null},&amp;i=j \end{matrix}\right.
+\]</div>
+</li>
+<li>
+<p>递推关系：</p>
+<div class="arithmatex">\[
+\pi[i][j][k]=\left\{\begin{matrix} \pi[i][j][k-1],\ \ &amp;f(i,j,k-1)\le f(i,k,k-1)+f(k,j,k-1)\\\pi[k][j][k-1],\ \ &amp;f(i,j,k-1)&gt;f(i,k,k-1)+f(k,j,k-1)\end{matrix}\right.
+\]</div>
+</li>
+</ul>
+<p>递归输出路径上的结点：</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">printPath</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">e</span><span class="p">:</span> 
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">elseif</span> <span class="n">π</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">e</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">==</span> <span class="n">NULL</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;impossible&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">printPath</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">π</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">t</span><span class="p">][</span><span class="n">n</span><span class="p">])</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_2">简化代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">floyd</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w">  </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">                </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -3010,8 +3206,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
