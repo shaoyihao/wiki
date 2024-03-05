@@ -14,7 +14,7 @@
         <link rel="prev" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
       
       
-        <link rel="next" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D/">
+        <link rel="next" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E4%B8%B2/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>字符串散列 - SYH's wiki</title>
+        <title>基本理论 - SYH's wiki</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              字符串散列
+              基本理论
             
           </span>
         </div>
@@ -1497,6 +1497,45 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_7_1" id="__nav_5_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    字符串散列
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            字符串散列
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -1507,7 +1546,7 @@
           
   
   <span class="md-ellipsis">
-    字符串散列
+    基本理论
   </span>
   
 
@@ -1518,7 +1557,7 @@
         
   
   <span class="md-ellipsis">
-    字符串散列
+    基本理论
   </span>
   
 
@@ -1558,6 +1597,35 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    最长公共子串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2927,7 +2995,7 @@
                   
 
 
-  <h1>字符串散列</h1>
+  <h1>基本理论</h1>
 
 <p>将一个字符串转化为一个数的散列方法：<strong>将字符串视作一个 <span class="arithmatex">\(p\)</span> 进制的数</strong>（一般 <span class="arithmatex">\(p\)</span> 取 <span class="arithmatex">\(131\)</span> 或 <span class="arithmatex">\(13331\)</span>），每个字符即该数的各位，再将这个 <span class="arithmatex">\(p\)</span> 进制的数转化为十进制的数，将结果<strong>模 <span class="arithmatex">\(N\)</span></strong>，这样便实现了<strong>将字符串映射为 <span class="arithmatex">\([0,N)\)</span> 中的一个数</strong>（一般取 <span class="arithmatex">\(N\)</span> 为 <span class="arithmatex">\(2^{64}\)</span>​​）。</p>
 <figure>
@@ -3075,7 +3143,7 @@ h[i] =h[i - 1]\times p + \text{str}[i]
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.annotate", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>

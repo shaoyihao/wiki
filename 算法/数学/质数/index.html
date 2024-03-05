@@ -3051,7 +3051,7 @@
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>注意到：<strong>每个合数都会且只会被其==最大真因数==筛掉</strong>。又每个合数的最大真因数是唯一的，从而每个合数都只会被筛一次，因此线性筛法可以使得：<strong>每个数只需要被遍历一次</strong>就可以判断是否筛去（即质数还是合数），时间复杂度为：<span class="arithmatex">\(O(n)\)</span>​ 。</p>
+<p>注意到：<strong>每个合数都会且只会被其<mark>最大真因数</mark>筛掉</strong>。又每个合数的最大真因数是唯一的，从而每个合数都只会被筛一次，因此线性筛法可以使得：<strong>每个数只需要被遍历一次</strong>就可以判断是否筛去（即质数还是合数），时间复杂度为：<span class="arithmatex">\(O(n)\)</span>​ 。</p>
 <div class="admonition question">
 <p class="admonition-title">一些问题</p>
 <ul>
@@ -3108,7 +3108,7 @@
 <h2 id="_8">分解质因数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>合数一定可以分解为质数的乘积。</p>
 <h3 id="_9">暴力<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>从小到大枚举所有数，若数 <span class="arithmatex">\(i\)</span> 是 <span class="arithmatex">\(x\)</span> 的因数，由于是从小到大枚举，因此此时 <span class="arithmatex">\(i\)</span> 也一定是质数，即此时 <span class="arithmatex">\(i\)</span> 即为 $x $ 的一个质因数，再求出 <span class="arithmatex">\(x\)</span> 中因数 <span class="arithmatex">\(i\)</span> 存在多少次。</p>
+<p>从小到大枚举所有数，若数 <span class="arithmatex">\(i\)</span> 是 <span class="arithmatex">\(x\)</span> 的因数，由于是从小到大枚举，因此此时 <span class="arithmatex">\(i\)</span> 也一定是质数，即此时 <span class="arithmatex">\(i\)</span> 即为 <span class="arithmatex">\(x\)</span> 的一个质因数，再求出 <span class="arithmatex">\(x\)</span> 中因数 <span class="arithmatex">\(i\)</span> 存在多少次。</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -3271,7 +3271,7 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.annotate", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
