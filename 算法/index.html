@@ -1252,7 +1252,7 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      代码简写
+      根据数据范围选择算法
     </span>
   </a>
   
@@ -1261,7 +1261,7 @@
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      数组开辟
+      代码简写
     </span>
   </a>
   
@@ -1270,7 +1270,7 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      数组初始化
+      数组开辟
     </span>
   </a>
   
@@ -1279,7 +1279,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      取模运算
+      数组初始化
     </span>
   </a>
   
@@ -1287,6 +1287,15 @@
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      取模运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       浮点数的比较
     </span>
@@ -1615,6 +1624,84 @@
   
   <span class="md-ellipsis">
     数学
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    排序
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="%E6%80%9D%E7%BB%B4/%E7%BD%91%E6%A0%BC%E9%81%8D%E5%8E%86/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    思维题
   </span>
   
 
@@ -2699,7 +2786,7 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      代码简写
+      根据数据范围选择算法
     </span>
   </a>
   
@@ -2708,7 +2795,7 @@
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      数组开辟
+      代码简写
     </span>
   </a>
   
@@ -2717,7 +2804,7 @@
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      数组初始化
+      数组开辟
     </span>
   </a>
   
@@ -2726,7 +2813,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      取模运算
+      数组初始化
     </span>
   </a>
   
@@ -2734,6 +2821,15 @@
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      取模运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       浮点数的比较
     </span>
@@ -2785,15 +2881,53 @@
 <li><a href="https://alchemist-al.com/">图解经典问题</a></li>
 </ul>
 <h2 id="_4">一些前置信息<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">代码简写<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">根据数据范围选择算法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>一般机试题的时间限制是 <span class="arithmatex">\(1\sim 2\)</span> 秒，C++ 代码中的操作次数控制在 <span class="arithmatex">\(10^8\)</span>​ 以内最佳。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">数据范围</th>
+<th style="text-align: center;">可以接受的时间复杂度</th>
+<th style="text-align: center;">常见算法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n\le 30\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(2^n)\)</span></td>
+<td style="text-align: center;">DFS+剪枝</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n\le 100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(n^3)\)</span></td>
+<td style="text-align: center;">Floyd</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n\le 1000\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(n^2),O(n^2\log n)\)</span></td>
+<td style="text-align: center;">Dijkstra、Prim、Bellman-Ford</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n\le 10^5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(n\log n)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n\le 10^7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(n)\)</span></td>
+<td style="text-align: center;">双指针、KMP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">代码简写<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>以下代码写法可能在本笔记中多次出现，特此声明：</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PII</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">LL</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="_6">数组开辟<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">数组开辟<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>如果数组大小较大，应将其定义在 <code>main</code> 函数之外。因为函数内部的局部变量存储于系统栈，空间较小；而函数外部的全局变量存储于静态存储区，空间较大。</p>
-<h3 id="_7">数组初始化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_8">数组初始化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -2811,7 +2945,7 @@
 <p>尽管 <code>0x7fffffff</code> 是 32-bit int 的最大值，但一般不用该值作为 <code>INF</code>，因为 <code>0x7fffffff</code> 不满足“无穷大加一个有穷数仍是无穷大”，它会发生溢出。</p>
 <p>而 <code>0x3f3f3f3f</code> 的十进制是 1061109567，是 <span class="arithmatex">\(10^9\)</span> 级别的(和 <code>0x7fffffff</code> 同一个数量级)。由于一般的数据都不会大于 <span class="arithmatex">\(10^9\)</span>，因此若令 <code>0x3f3f3f3f</code> 为 <code>INF</code>，则 <code>INF</code> 加上一个数据时，并不会发生溢出（这就满足了 “无穷大加一个有穷数仍是无穷大”）。事实上 <code>0x3f3f3f3f + 0x3f3f3f3f = 2122219134</code> 仍没有超过 32-bit int 的表示范围，所以 <code>0x3f3f3f3f</code> 还满足“无穷大加无穷大还是无穷大”。</p>
 </details>
-<h3 id="_8">取模运算<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_9">取模运算<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>在程序设计竞赛中，通常都需要对结果取模。其中用到的运算法则有：</p>
 <div class="arithmatex">\[
 \begin{align}
@@ -2819,7 +2953,7 @@
 \end{align}
 \]</div>
 <p>我们只需要在运算过程中不断进行取模，就可以使得最终结果与先计算再取模的结果相同。</p>
-<h3 id="_9">浮点数的比较<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_10">浮点数的比较<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>由于计算机中采用有限位的二进制编码，因此浮点数在计算机中的存储并不总是精确的。在进行浮点数的比较时，通常需引入一个极小数对误差进行修正。</p>
 <div class="language-c highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-8</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
