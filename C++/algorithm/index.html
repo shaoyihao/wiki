@@ -2349,6 +2349,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      打擂台
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lower_bound-upper_bound" class="md-nav__link">
     <span class="md-ellipsis">
       lower_bound 与 upper_bound
@@ -2363,7 +2372,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       四个参数
     </span>
@@ -3006,6 +3015,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      打擂台
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lower_bound-upper_bound" class="md-nav__link">
     <span class="md-ellipsis">
       lower_bound 与 upper_bound
@@ -3020,7 +3038,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       四个参数
     </span>
@@ -3142,16 +3160,21 @@
 </li>
 </ul>
 </details>
+<h4 id="_5">打擂台<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">max_element</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="p">);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">min_element</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="p">);</span><span class="w">  </span><span class="c1">// 返回迭代器（若存在多个相同的最值，则返回首个）</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="lower_bound-upper_bound"><code>lower_bound</code> 与 <code>upper_bound</code><a class="headerlink" href="#lower_bound-upper_bound" title="Permanent link">&para;</a></h4>
-<p><div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">lower_bound</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">    </span><span class="c1">// 二分查找第一个 ≥x 的元素</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">upper_bound</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">    </span><span class="c1">// 二分查找第一个 &gt;x 的元素</span>
+<p><div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">lower_bound</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">    </span><span class="c1">// 二分查找第一个 ≥x 的元素</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">upper_bound</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">    </span><span class="c1">// 二分查找第一个 &gt;x 的元素</span>
 </code></pre></div>
 返回元素下标：
-<div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 </code></pre></div></p>
 <p>搜索失败时返回 last。</p>
-<h3 id="_5">四个参数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">nth_element</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="p">);</span><span class="w">  </span><span class="c1">// 划分(partition)</span>
+<h3 id="_6">四个参数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">nth_element</span><span class="p">(</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="p">);</span><span class="w">  </span><span class="c1">// 划分(partition)</span>
 </code></pre></div>
 <ul>
 <li><code>nth_element(first, first + k, last)</code> ：将第 <span class="arithmatex">\(k\)</span> 小的元素放到第 <span class="arithmatex">\(k\)</span> 个位置上，并且 左部分 <span class="arithmatex">\(\le\)</span> 右部分</li>

@@ -1483,6 +1483,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      从集合角度分析
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1606,6 +1615,27 @@
   
   <span class="md-ellipsis">
     最低票价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BB%91%E9%9B%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    滑雪
   </span>
   
 
@@ -2814,6 +2844,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      从集合角度分析
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2853,7 +2892,7 @@
 <p>动态规划算法有 2 种实现方法：</p>
 <ul>
 <li>
-<p><strong>带备忘的自顶向下法</strong></p>
+<p><strong>带备忘的自顶向下法</strong>（记忆化搜索）</p>
 <p>此写法仍按自然的递归形式编写过程，但过程会<strong>保存每个子问题的结果</strong>。当需要一个子问题的解时，首先检查是否已经保存过此解。如果是，则直接返回保存的值。</p>
 </li>
 <li>
@@ -2872,6 +2911,19 @@
 
 <p>​   </p>
 <p><strong>子问题图的规模</strong>可以帮助确定动态规划算法的运行时间。由于每个子问题只求解一次，因此<strong>算法运行时间 = 每个子问题求解时间之和</strong>。一个子问题的求解时间与子问题图中<strong>对应顶点的出度</strong>成正比，而子问题的数目即图的顶点数，因此动态规划算法的运行时间与<strong>顶点和边的数量</strong>呈线性关系。</p>
+<h2 id="_4">从集合角度分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>状态的常见表示方式：</p>
+<ul>
+<li>一维图：<span class="arithmatex">\(f(i)\)</span></li>
+<li>网格图：<span class="arithmatex">\(f(i,j)\)</span></li>
+<li>背包问题：<span class="arithmatex">\(f(n,v)\)</span></li>
+<li>...</li>
+</ul>
+<p>将每种状态都视作一个<strong>集合</strong>，其中包含了所有满足条件的方案。</p>
+<ul>
+<li>状态值即由集合中所有方案的某属性所得，如最大值、最小值等。</li>
+<li>“状态转移”即考虑集合的<strong>划分</strong>，将该状态的值用子状态的值表示。</li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
