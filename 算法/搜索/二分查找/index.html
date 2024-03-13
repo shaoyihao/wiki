@@ -3015,7 +3015,7 @@
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
 <span class="normal"><a href="#__codelineno-2-5">5</a></span>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span><span class="w">  </span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
@@ -3023,6 +3023,9 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<blockquote>
+<p>为保证 <span class="arithmatex">\(\text{mid}\)</span> 不越界，应将 <span class="arithmatex">\(l,r\)</span> 初始化为 <span class="arithmatex">\(a-1,b+1\)</span>。不过若问题一定有解，则 <span class="arithmatex">\(l,r\)</span> 只需包含住解即可。</p>
+</blockquote>
 <p>最终 <span class="arithmatex">\(l,r\)</span> 指在两个命题的边界处：</p>
 <p><img alt="在这里插入图片描述" src="../img/b98e9b9a13cc4570b323baa8f451f561.png" /></p>
 <p>若 <span class="arithmatex">\(l=a-1\)</span> 或 <span class="arithmatex">\(r = b+1\)</span>​，说明该命题对应的区间为空。</p>
