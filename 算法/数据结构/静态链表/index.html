@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/">
+        <link rel="prev" href="../%E6%A6%82%E8%BF%B0/">
       
       
-        <link rel="next" href="../%E5%8D%95%E8%B0%83%E6%A0%88/">
+        <link rel="next" href="../%E6%A0%88/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -1311,48 +1311,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    约瑟夫环
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    对顶堆
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1509,11 +1467,11 @@
         
   
   
-    <a href="../%E5%8D%95%E8%B0%83%E6%A0%88/" class="md-nav__link">
+    <a href="../%E6%A0%88/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    单调栈
+    栈
   </span>
   
 
@@ -1524,6 +1482,48 @@
   
 
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    约瑟夫环
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对顶堆
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1687,6 +1687,84 @@
     </a>
   
 
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E5%A0%86/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    堆
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E6%95%A3%E5%88%97%E8%A1%A8/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    散列表
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
       
@@ -3188,7 +3266,7 @@
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p>此处<strong>数组下标的次序反映了插入的时间顺序</strong>，第一个插入的元素下标为 0，第二个插入的元素下标为 1，...，第 k 个插入的元素下标为 k-1。而由于此处用的是<strong>头插法</strong>，因此所形成的链表结构的遍历顺序恰与数组顺序相反，<strong>链表中第一个结点实则是最后一次插入的结点</strong>。</p>
-<p>也可以初始化时 令<span class="arithmatex">\(\text{idx} =1\)</span>，从下标 1 开始存，如此下标 <span class="arithmatex">\(k\)</span> 就说明该元素是第 <span class="arithmatex">\(k\)</span> 个插入的元素。</p>
+<p>也可以初始化时 令<span class="arithmatex">\(\text{idx} =1\)</span>，从下标 1 开始存，如此<strong>下标 <span class="arithmatex">\(k\)</span> 就说明该元素是第 <span class="arithmatex">\(k\)</span> 个插入的元素</strong>。</p>
 </div>
 <h3 id="_3">结点删除<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -3221,44 +3299,52 @@
 <li><span class="arithmatex">\(l[i]\)</span> 表示该结点的前一个结点的下标。</li>
 <li><span class="arithmatex">\(r[i]\)</span> ​表示该结点的后一个结点的下标。</li>
 </ul>
-<p>约定<strong>用 0 表示头结点的下标，1 表示尾结点的下标</strong>。<strong>其余结点从数组下标 2 开始存储</strong>。</p>
+<p>约定<strong>用 <code>HEAD</code> 表示头结点的下标，<code>TAIL</code> 表示尾结点的下标</strong>（这两个固定结点起到定界作用）。<strong>其余结点从数组下标 1 开始存储</strong>。</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 从下标为2开始存储其它结点</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">HEAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">TAIL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="n">HEAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TAIL</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">[</span><span class="n">TAIL</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HEAD</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="_6">结点插入<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// 在下标为k的结点后插入结点</span>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// 在下标为k的结点后插入结点</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">{</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">e</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">l</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">l</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="p">;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="p">;</span><span class="w">  </span><span class="c1">// 注意调整的顺序</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="n">idx</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">l</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="n">l</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="p">;</span><span class="w">  </span><span class="c1">// 注意调整的顺序</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="n">idx</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="img" src="../img/watermark%2Ctype_d3F5LXplbmhlaQ%2Cshadow_50%2Ctext_Q1NETiBAU3RheS0taHVuZ3J5%2Csize_20%2Ccolor_FFFFFF%2Ct_70%2Cg_se%2Cx_16-20240226142636997.png" /></p>
 <p>变式：</p>
 <ul>
 <li>在下标为 k 的结点前面插入结点：<code>insert(l[k], x)</code></li>
-<li>头插：<code>insert(0, x)</code></li>
-<li>尾插：<code>insert(l[1], x)</code></li>
+<li>头插：<code>insert(HEAD, x)</code></li>
+<li>尾插：<code>insert(l[TAIL], x)</code></li>
 </ul>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>此处数组下标的次序反映了插入的时间顺序，第一个插入的元素下标为 2，第二个插入的元素下标为 3，...，第 k 个插入的元素下标为 k+1。</p>
+<p>此处数组下标的次序反映了插入的时间顺序，<strong>第 k 个插入的元素下标为 k</strong>。</p>
 </div>
 <h3 id="_7">结点删除<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
@@ -3275,12 +3361,10 @@
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">traverse</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">traverse</span><span class="p">()</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="p">{</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="c1">// 从下标为r[0]的结点开始遍历，下标0、1的两个结点为哨兵结点，内无数据元素，不参与遍历</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">HEAD</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">TAIL</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 

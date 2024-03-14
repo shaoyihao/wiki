@@ -1311,48 +1311,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    约瑟夫环
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    对顶堆
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/" class="md-nav__link">
         
   
@@ -1386,11 +1344,11 @@
         
   
   
-    <a href="../%E5%8D%95%E8%B0%83%E6%A0%88/" class="md-nav__link">
+    <a href="../%E6%A0%88/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    单调栈
+    栈
   </span>
   
 
@@ -1401,6 +1359,48 @@
   
 
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    约瑟夫环
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对顶堆
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1622,6 +1622,84 @@
     </a>
   
 
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E5%A0%86/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    堆
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E6%95%A3%E5%88%97%E8%A1%A8/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    散列表
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
       
@@ -2975,32 +3053,30 @@
   <h1>滑动窗口</h1>
 
 <p><strong>滑动窗口每次研究的是数组的一部分</strong>（长度固定），如何求滑动窗口里的最大值（或最小值）？</p>
-<p>思路：另设一个<strong>单调队列</strong>作为辅助，其中存储的元素是 <mark>窗口中满足单调性的<strong>部分</strong>元素</mark> 的 <mark><strong>下标</strong></mark>。每当窗口后移、新元素进入窗口时，需要<strong>对单调队列进行调整</strong>，使仍满足单调性。</p>
+<p>思路：另设一个<strong>单调队列</strong>作为辅助，其中存储的元素是 <mark>窗口中满足单调性的<strong>部分</strong>元素</mark> 的 <mark><strong>下标</strong></mark>。每当窗口后移、新元素进入窗口时，需要<strong>对单调队列进行调整</strong>，使对应元素仍满足单调性。</p>
 <figure>
-    <img src="../img/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3RheS0taHVuZ3J5,size_20,color_FFFFFF,t_70,g_se,x_16-20240226195103934.png" alt="img" style="zoom:70%;" />
+    <img src="../img/55289_0923cf569c-滑动窗口.png" alt="滑动窗口.PNG" />
     <caption></caption>
 </figure>
 
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p><mark><strong>单调队列 <span class="arithmatex">\(≠\)</span> 窗口</strong></mark>，单调队列是帮助研究窗口的<strong>辅助</strong>结构。</p>
-</div>
-<blockquote>
+<p>此处<mark><strong>单调队列 <span class="arithmatex">\(≠\)</span> 窗口</strong></mark>，单调队列是帮助研究窗口的<strong>辅助</strong>结构，对原数组没有影响。</p>
 <p>在队列中存储元素下标的原因是：“窗口限制”是通过下标来反映的，队列中存储下标可以判断是否超出了窗口范围。</p>
-</blockquote>
-<p><strong>单调队列的每个状态都对应着某个窗口中存在的单调关系</strong>，因此借助该队列，就可以快速地求出窗口中的最大值、最小值。新元素入队时：</p>
+</div>
+<p><strong>单调队列的每个状态都对应着某个窗口中存在的、以窗尾元素结尾的的单调关系</strong>，因此借助该队列，就可以快速地求出窗口中的最大值、最小值。</p>
 <ul>
-<li>对于单调<strong>递增</strong>队列，<mark>队头</mark>元素即窗口中的<mark>最小值</mark>的下标（注意：队尾元素<strong>不是</strong>窗口中的最大值的下标）</li>
-<li>对于单调<strong>递减</strong>队列，<mark>队头</mark>元素即窗口中的<mark>最大值</mark>的下标（注意：队尾元素<strong>不是</strong>窗口中的最小值的下标）</li>
+<li>对于单调<strong>递增</strong>队列，<mark>队头</mark>元素即窗口中的<mark>最小值</mark>的下标（注意：窗尾元素不一定是窗口中的最大值）</li>
+<li>对于单调<strong>递减</strong>队列，<mark>队头</mark>元素即窗口中的<mark>最大值</mark>的下标（注意：窗尾元素不一定是窗口中的最小值）</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>单调队列在此处只做辅助求解作用，对原数组没有影响。队列中的元素只是窗口中的<strong>部分</strong>元素（满足单调性的那部分）的下标，因此单调队列中的元素个数总小于等于窗口长度，但可以利用单调队列将其窗口中的最值求出。</p>
+<p>队列中的元素只是窗口中的<strong>部分</strong>元素（满足单调性的那部分）的下标，因此单调队列中的元素个数总小于等于窗口长度。</p>
 </div>
 <p>要注意窗口长度这一硬性限制，<strong>当队列中所存的下标所指向的元素已不再属于窗口中时，要及时将该元素出队。</strong>以单调递增队列为例，判断方法为：</p>
 <ul>
 <li>数列中下标为 <span class="arithmatex">\(i\)</span> 的元素进入窗口后，若满足 <code>i &gt;= k - 1</code>，就说明此时窗口中有 <span class="arithmatex">\(k\)</span> 个元素（窗口完整了）。</li>
-<li>当数列中下标为 <span class="arithmatex">\(i\)</span> 的元素进入窗口时，窗口中首元素的下标为 <span class="arithmatex">\(i-k+1\)</span>，若下标 <code>q.front() &lt; i - k + 1</code>，说明队首所指向的数组元素已不在窗口中。</li>
+<li>当数列中下标为 <span class="arithmatex">\(i\)</span> 的元素进入窗口时，窗口中首元素的下标为 <span class="arithmatex">\(\max\{0,\ i-k+1\}\)</span>，若下标 <code>q.front() &lt; i - k + 1</code>，说明队首所指向的数组元素已不在窗口中。</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">求窗口中的最小值</label><label for="__tabbed_1_2">求窗口中的最大值</label></div>
 <div class="tabbed-content">
@@ -3014,7 +3090,7 @@
 <span class="normal"><a href="#__codelineno-0-7">7</a></span>
 <span class="normal"><a href="#__codelineno-0-8">8</a></span>
 <span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">// 窗口滑动</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span><span class="w"> </span><span class="c1">// 窗口的移动使得队头指向的数组元素不再属于该窗口，队头元素出队。</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">()]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w"> </span><span class="c1">// 单调性的维护</span>

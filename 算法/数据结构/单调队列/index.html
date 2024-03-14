@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../%E7%9B%B4%E6%96%B9%E5%9B%BE%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/">
+        <link rel="prev" href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/">
       
       
         <link rel="next" href="../%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
@@ -1316,48 +1316,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    约瑟夫环
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    对顶堆
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/" class="md-nav__link">
         
   
@@ -1391,11 +1349,11 @@
         
   
   
-    <a href="../%E5%8D%95%E8%B0%83%E6%A0%88/" class="md-nav__link">
+    <a href="../%E6%A0%88/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    单调栈
+    栈
   </span>
   
 
@@ -1406,6 +1364,48 @@
   
 
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    约瑟夫环
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%B9%E9%A1%B6%E5%A0%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对顶堆
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1673,6 +1673,84 @@
     </a>
   
 
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E5%A0%86/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    堆
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E6%95%A3%E5%88%97%E8%A1%A8/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    散列表
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
       
@@ -3057,12 +3135,11 @@
 <p><img alt="img" src="../img/watermark%2Ctype_ZHJvaWRzYW5zZmFsbGJhY2s%2Cshadow_50%2Ctext_Q1NETiBAU3RheS0taHVuZ3J5%2Csize_20%2Ccolor_FFFFFF%2Ct_70%2Cg_se%2Cx_16-20240226194312534.jpeg" /></p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">()]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">q</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">q</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </code></pre></div></td></tr></table></div>
-<div class="admonition 注意">
-<p class="admonition-title">注意</p>
-<p>单调队列在<strong>起始</strong>时、或弹出所有元素时为空。而当弹出所有元素时，<mark>紧接着</mark>就会再添入一个新元素，因此整体上看，<strong>单调队列只会在起始时为空</strong>。</p>
-</div>
+<blockquote>
+<p>单调队列在<strong>起始</strong>时、或弹出所有元素时为空。而当弹出所有元素时<mark>紧接着</mark>就会再添入一个新元素，因此整体上看，<strong>单调队列只会在起始时为空</strong>。</p>
+</blockquote>
 <h2 id="_2">深层理解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>单调队列是一个<strong>动态维护</strong>的，使得整个队列中的元素总是呈现出单调性的一种数据结构。</p>
 <p>它总是<strong>以即将入队的元素作为标准</strong>，来对整个队列进行调整。因此对于一个含有 <span class="arithmatex">\(n\)</span> 个元素的数组，它的单调队列有 <span class="arithmatex">\(n\)</span> 种状态，<strong>每一种状态都是一个以 <span class="arithmatex">\(a_i\)</span> ​为末元素的极大递增（或递减）子序列</strong>。</p>
