@@ -1794,6 +1794,45 @@
         
   
   
+    <a href="../%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    拓扑排序
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
     <a href="../%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" class="md-nav__link">
       
   
@@ -1876,10 +1915,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_12_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_12_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_4_12_6" id="__nav_5_4_12_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4_12_7" id="__nav_5_4_12_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1890,8 +1929,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_12_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_4_12_6">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_12_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4_12_7">
             <span class="md-nav__icon md-icon"></span>
             二部图
           </label>
@@ -2326,7 +2365,7 @@
         
   
   
-    <a href="../../../%E5%85%B6%E5%AE%83/%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97/" class="md-nav__link">
+    <a href="../../../%E5%85%B6%E5%AE%83/%E5%BA%8F%E5%88%97%E8%BD%AC%E6%8D%A2/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2898,45 +2937,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../计算机组成原理/数据存储概述.md" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    数据存储
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3349,7 +3349,7 @@
 <p>不妨给二部图<strong>定向</strong>，总是考虑 A 中某顶点<strong>能否</strong>在 B 中找到匹配（函数 <code>find</code> ）。</p>
 <p>对于 A 中的顶点 <span class="arithmatex">\(a_i\)</span>，在为其寻找匹配时，起始时<strong>总是先令 <span class="arithmatex">\(a_i\)</span> 所可以匹配的点（即邻接点）先初始化为 “未被预定” 的状态</strong>（即使实际上它可能已经被匹配过了，<code>match</code> 数组中有值，因为这些匹配只是暂时的，后面可能会被修改）。</p>
 <blockquote>
-<p>为 <span class="arithmatex">\(a_i\)</span> 寻找匹配时，可能需要经过一系列递归搜索，“预定”描述的是在这些过程中结点是否可分配的状态</p>
+<p>为 <span class="arithmatex">\(a_i\)</span> 寻找匹配时，可能需要经过一系列递归搜索，“预定”描述的就是在<strong>这一轮过程</strong>中结点 <span class="arithmatex">\(b_j\)</span> 是否可分配。</p>
 </blockquote>
 <p>枚举邻接点 <span class="arithmatex">\(b_j\)</span>，若 <span class="arithmatex">\(b_j\)</span> 没有被 “预定” 过，则 <span class="arithmatex">\(a_i\)</span> <strong>可能</strong>可以与 <span class="arithmatex">\(b_j\)</span> 进行匹配，这取决于 <span class="arithmatex">\(b_j\)</span>​ 之前是否已经与其它点匹配过：</p>
 <ul>
@@ -3368,6 +3368,10 @@
 </li>
 </ul>
 <p>显然这是一个递归的过程，每一次的寻找匹配的过程都是在上一层新增的某个前提下（XX结点被“预定”，不可取）。定义<strong>全局数组</strong> st，表示每个点是否被“预定”过，<strong>保证了在深度的递归调用过程中，之前所有新增的条件都是被考虑到的。</strong></p>
+<p><figure>
+    <img src="../img/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3RheS0taHVuZ3J5,size_20,color_FFFFFF,t_70,g_se,x_16.png" alt="img" style="zoom:50%;" />
+    <caption></caption>
+</figure></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">写法1</label><label for="__tabbed_1_2">写法2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3392,7 +3396,8 @@
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
 <span class="normal"><a href="#__codelineno-0-20">20</a></span>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// 判断x能否找到匹配</span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// 判断x能否找到匹配</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">[</span><span class="n">x</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ne</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="c1">// 枚举可以与x匹配的结点</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
@@ -3404,16 +3409,17 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="n">y</span><span class="p">])</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w">  </span><span class="c1">// 已被“预定”过则跳过</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">st</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">         </span><span class="c1">// 假设y被x预定</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span><span class="w">   </span><span class="c1">// 若y匹配的对象t可与其它点再构成匹配（从而将y让出）</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="n">match</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 该点所连接的所有点都已有了匹配对象，且无法被让出，即该点找不到匹配。</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="n">st</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">         </span><span class="c1">// 假设y被x预定</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span><span class="w">   </span><span class="c1">// 若y匹配的对象t可与其它点再构成匹配（从而将y让出）</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="n">match</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 该点所连接的所有点都已有了匹配对象，且无法被让出，即该点找不到匹配。</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -3467,6 +3473,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="n">res</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>时间复杂度：<span class="arithmatex">\(O(|V||E|)\)</span>，不过一般实际运行时间一般远小于 <span class="arithmatex">\(O(|V||E|)\)</span>，甚至可以到达 <span class="arithmatex">\(O(|V|)\)</span>。</p>
 <h2 id="resource">Resource<a class="headerlink" href="#resource" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://algorithms.discrete.ma.tum.de/graph-algorithms/matchings-hungarian-method/index_en.html">图解匈牙利算法</a></li>
