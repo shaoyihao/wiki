@@ -1940,6 +1940,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%91%E7%94%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    发电
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%88%A0%E8%BE%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    删边
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A0%91%E7%9A%84%E5%AE%8C%E5%85%A8%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树的完全图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1984,6 +2047,45 @@
     </a>
   
 
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    连通分量
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
       
@@ -3311,6 +3413,9 @@
 <li>枚举每条边 <span class="arithmatex">\((a,b)\)</span>，若 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 目前还不在一个集合中（即 <span class="arithmatex">\(a,b\)</span> 两点还不连通，再加上这条边不会产生回路），就将该边加入生成树（该过程时间复杂度为 <span class="arithmatex">\(O(m)\)</span>）                         【“加边”】</li>
 <li>将 <span class="arithmatex">\(a,b\)</span> 所在集合合并（利用<a href="../../%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>），表示这条边加入生成树中，这两点连通了。</li>
 </ul>
+<blockquote>
+<p>初始时没有边，图中有 <span class="arithmatex">\(n\)</span> 个连通块（每个连通块中只有 1 个点），Kruskal 算法的不断迭代，使得图中连通块数目不断减少，最终减为 <span class="arithmatex">\(1\)</span> 时，即得生成树。</p>
+</blockquote>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -3363,7 +3468,15 @@
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>时间复杂度：<span class="arithmatex">\(O|E|\log |E|\)</span> 。</p>
+<p>时间复杂度：<span class="arithmatex">\(O|E|\log |E|\)</span>​ 。</p>
+<div class="admonition info">
+<p class="admonition-title">拓展</p>
+<ul>
+<li>在所有生成树构成的集合中，由 Kruskal 算法求出的生成树，不但权值之<strong>和</strong>最小，而且最大边的<strong>权值</strong>也一定最小。</li>
+<li>在非连通图中求“最小生成森林”时，使用 Kruskal 算法也比较简便。（<a href="https://www.acwing.com/problem/content/1143/">例题</a>）</li>
+<li>在一个“残图”上使用 Kruskal 算法，可以得到包含该“残图”的最小生成树。（<a href="https://www.acwing.com/problem/content/1145/">例题1</a>, <a href="https://www.acwing.com/problem/content/1146/">例题2</a>）</li>
+</ul>
+</div>
 
 
 
