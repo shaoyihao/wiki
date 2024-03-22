@@ -3809,7 +3809,7 @@
 </code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>由于图中可能存在<strong>负权边</strong>，此时即使 <span class="arithmatex">\(\text{dist}[u]=\text{dist}[v]=\text{INF}\)</span>，但由于 <span class="arithmatex">\(w&lt;0\)</span>，因此执行 <code>relax(u, v, w)</code> 时会发生 <span class="arithmatex">\(\text{dist}[v]\)</span> 的更新。<span class="arithmatex">\(\text{dist}[v]\)</span> 数值上变小了一点，但仍是 INF 级别。因此在 Bellman-Ford 算法中，判断是否存在最短路时，不能通过 <code>dist[x] == 0x3f3f3f3f</code> 来判断，而应通过 <code>dist[x] &gt; 0x3f3f3f3f / 2</code> 判断。</p>
+<p>由于图中可能存在<strong>负权边</strong>，此时即使 <span class="arithmatex">\(\text{dist}[u]=\text{dist}[v]=\text{INF}\)</span>，但由于 <span class="arithmatex">\(w&lt;0\)</span>，因此执行 <code>relax(u, v, w)</code> 时会发生 <span class="arithmatex">\(\text{dist}[v]\)</span> 的更新。<span class="arithmatex">\(\text{dist}[v]\)</span> 数值上变小了一点，但仍是 INF 级别。因此在“图中存在负权边且算法中存在全局迭代”时（例如 Bellman-Ford 算法、Floyd 算法），不能通过 <code>dist[x] == 0x3f3f3f3f</code> 来判断是否存在最短路，而应通过 <code>dist[x] &gt; 0x3f3f3f3f / 2</code> 判断。</p>
 </div>
 <h2 id="_2">原理分析<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>定理1：<strong>若图中不包含从源点 <span class="arithmatex">\(s\)</span> 可以到达的负权回路</strong>，则经上述迭代 <span class="arithmatex">\(|V|-1\)</span> 次后，所有从 <span class="arithmatex">\(s\)</span> 可达的结点 <span class="arithmatex">\(v\)</span> 都有 <span class="arithmatex">\(\text{dist}[v]=\delta(s, v)\)</span>。</p>

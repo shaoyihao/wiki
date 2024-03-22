@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../%E9%A9%AC%E8%B5%B0%E6%97%A5/">
+        <link rel="prev" href="../%E6%9E%9A%E4%B8%BE%E5%85%A8%E6%8E%92%E5%88%97/">
       
       
-        <link rel="next" href="../%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99/">
+        <link rel="next" href="../n%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>四阶数独 - SYH's wiki</title>
+        <title>枚举不重复全排列 - SYH's wiki</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              四阶数独
+              枚举不重复全排列
             
           </span>
         </div>
@@ -1503,35 +1503,93 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../%E6%9E%9A%E4%B8%BE%E5%85%A8%E6%8E%92%E5%88%97/" class="md-nav__link">
-      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_6_2_3" id="__nav_5_6_2_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     排列型
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_6_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            排列型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9E%9A%E4%B8%BE%E5%85%A8%E6%8E%92%E5%88%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    枚举全排列
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    枚举不重复全排列
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1584,17 +1642,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9B%E9%98%B6%E6%95%B0%E7%8B%AC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1603,7 +1654,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2963,17 +3013,29 @@
                   
 
 
-  <h1>四阶数独</h1>
+  <h1>枚举不重复全排列</h1>
 
-<p>题目：给出一个 <span class="arithmatex">\(4×4\)</span> 的网格，每个格子中只能填写 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(4\)</span> 的整数，要求每行、每列、四等分更小的正方形都刚好由 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(4\)</span> 组成。一共有多少种填写方案？</p>
-<figure>
-    <img src="../img/image-20240302132456434.png" alt="image-20240302132456434" style="zoom:40%;" />
-    <caption></caption>
-</figure>
-
-<blockquote>
-<p>16 个格子，每个格子有 4 种填写方案，因此共有 <span class="arithmatex">\(4^{16}\)</span> 种填写方法，暴力枚举显然不可行，需要剪掉大量无效状态。</p>
-</blockquote>
+<p><a href="https://leetcode.cn/problems/permutations-ii/description/">题目</a>：<span class="arithmatex">\(n\)</span>​ 个元素中可能存在重复元素，求不重复的全排列的数目。</p>
+<p>分析：若长度为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(q\)</span> 中存在 <span class="arithmatex">\(m_1\)</span> 个 <span class="arithmatex">\(a_1\)</span>、<span class="arithmatex">\(m_2\)</span> 个 <span class="arithmatex">\(a_2\)</span>、...、<span class="arithmatex">\(m_t\)</span> 个 <span class="arithmatex">\(a_t\)</span>，则 <span class="arithmatex">\(q\)</span> 看似有 <span class="arithmatex">\(n!\)</span> 种排列，但实际上<strong>不同的排列只有 <span class="arithmatex">\(\dfrac{n!}{m_1!m_2!\cdots m_t!}\)</span> 个</strong>。</p>
+<p><span class="arithmatex">\(m\)</span> 个相同的元素可以构成 <span class="arithmatex">\(m!\)</span> 个排列，但考虑不重复的排列时，计数仅为 <span class="arithmatex">\(1\)</span>。设 <span class="arithmatex">\(q\)</span> 中存在 <span class="arithmatex">\(m\)</span> 个 <span class="arithmatex">\(x\)</span>，不妨记为 <span class="arithmatex">\(x^{(1)},x^{(2)},...,x^{(m)}\)</span>（将这个顺序规定为“合法顺序”），在统计 <span class="arithmatex">\(q\)</span> 的不重复排列时，我们需要保证排列中 <span class="arithmatex">\(x\)</span> 的排序总是“合法顺序”。即：人为<strong>固定相同元素之间的顺序</strong>，从而避免重复计数。</p>
+<p>算法思想：</p>
+<ol>
+<li>
+<p>首先将数组 <span class="arithmatex">\(q\)</span> 排序，从而数组中的相同元素会连在一起。</p>
+<p>规定<strong>相同元素中较前面的先放到排列中</strong>，从而保证最终得到的排列中相同元素之间的顺序是唯一的。</p>
+</li>
+<li>
+<p>枚举 <span class="arithmatex">\(q\)</span> 中的每一个元素，判断 <span class="arithmatex">\(q[i]\)</span> 能否放置在 <span class="arithmatex">\(a[u]\)</span>：</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(q[i]\)</span> 已经放过了（前面某个位置），即 <span class="arithmatex">\(\text{st}[i]=\text{true}\)</span>，则跳过；</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(q[i]=q[i-1]\)</span> 且 <span class="arithmatex">\(\text{st}[i-1]=\text{false}\)</span>，这说明前面有一个相同元素还没有放到排列中，从而 <span class="arithmatex">\(q[i]\)</span> 也不能放，跳过。</p>
+</li>
+</ul>
+</li>
+</ol>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -3001,34 +3063,40 @@
 <span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">st</span><span class="p">[</span><span class="n">N</span><span class="p">];</span><span class="w">  </span><span class="c1">// st[i]存储q[i]是否被用过</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w">  </span><span class="c1">// 尝试填 (row,col) 这一格</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">{</span><span class="w">  </span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="c1">// 已填满4×4网格</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="c1">// print();</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="n">res</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="c1">// 判断这一格上能否放置i</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="n">g</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="n">dfs</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="n">dfs</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="n">g</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="c1">// 搜索第u个位置</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">st</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+</span><a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="n">st</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">{</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从第1行第1列开始填起</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="n">st</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="p">}</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="n">sort</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 
 

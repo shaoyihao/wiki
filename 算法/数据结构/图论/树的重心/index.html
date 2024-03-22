@@ -3361,6 +3361,9 @@ k_i = \text{max}\{\text{size}(子树1), \text{size}(子树2),..., \  n - \text{s
 \]</div>
 <p>因此问题转化为求<strong>子树中的结点数目</strong>。</p>
 <p><strong>在对树进行 DFS 的过程中，可以顺带求出每一个子树的元素个数</strong>。</p>
+<blockquote>
+<p>对于一个含 <span class="arithmatex">\(n\)</span> 点、<span class="arithmatex">\(n-1\)</span> 边的无向连通图，可以以任意一个结点作为根结点，形成一个有向树。在 DFS 时，以任意结点作为起点，则该结点实际上就是根结点。</p>
+</blockquote>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>

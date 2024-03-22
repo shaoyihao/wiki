@@ -1742,6 +1742,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../%E5%88%A0%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    删数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../%E6%89%A9%E5%B1%95gcd/" class="md-nav__link">
         
   
@@ -3257,7 +3278,14 @@
 
   <h1>质数</h1>
 
+<p>除了 <strong><span class="arithmatex">\(1\)</span> 和自身</strong>外没有其它因数的正整数称为<strong>质数</strong>。</p>
+<blockquote>
 <p>质数只定义在大于等于 <span class="arithmatex">\(2\)</span> 的数中，小于等于 <span class="arithmatex">\(1\)</span> 的数既不是质数，也不是合数。</p>
+</blockquote>
+<div class="admonition 质数定理">
+<p class="admonition-title">质数定理</p>
+<p><span class="arithmatex">\(1\sim n\)</span> 内质数的数目约为 <span class="arithmatex">\(\dfrac{n}{\ln n}\)</span> 。</p>
+</div>
 <h2 id="_1">质数的判断<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">暴力试除<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>时间复杂度：<span class="arithmatex">\(\Theta(n)\)</span> </p>
@@ -3280,22 +3308,16 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="_3">优化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="admonition 定理">
-<p class="admonition-title">定理</p>
-<p>若 <span class="arithmatex">\(d\ |\ n\)</span>，则 <span class="arithmatex">\(\dfrac{n}{d}\ |\ n\)</span>。</p>
-</div>
-<p>该结论揭示了：<strong><span class="arithmatex">\(n\)</span> 的因数都是成对出现的（<span class="arithmatex">\(d,\dfrac{n}{d}\)</span>）</strong>，因此我们在枚举时只需要枚举每一对因数中较小的那一个，范围为 <span class="arithmatex">\([2,\sqrt n]\)</span>，改进后的算法时间复杂度为 <span class="arithmatex">\(\Theta(\sqrt n)\)</span>。</p>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
+<p>由于 <strong><span class="arithmatex">\(n\)</span> 的因数都是成对出现的（<span class="arithmatex">\(d,\dfrac{n}{d}\)</span>）</strong>，因此我们在枚举时只需要枚举每一对因数中较小的那一个，范围为 <span class="arithmatex">\([2,\sqrt n]\)</span>，改进后的算法时间复杂度为 <span class="arithmatex">\(\Theta(\sqrt n)\)</span>。</p>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
@@ -3304,11 +3326,14 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1">// for (int i = 2; i &lt;= sqrt(x); i++) 不推荐，sqrt函数较慢</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">// for (int i = 2; i * i &lt;= x; i++) 不推荐，存在i*i溢出风险</span>
 </code></pre></div></td></tr></table></div>
+<div class="admonition 定理">
+<p class="admonition-title">定理</p>
+<p>若 <span class="arithmatex">\(n\)</span> 是合数，则一定存在质数 <span class="arithmatex">\(p\)</span>，满足 <span class="arithmatex">\(p|n\)</span> 且 <span class="arithmatex">\(p\le \sqrt{n}\)</span> 。</p>
+</div>
 <h2 id="_4">质数的筛选<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>筛质数的基本思路都是：<strong>将合数筛去，留下的都是质数</strong>。</p>
+<p>筛质数的基本思路：<strong>将合数筛去，留下的都是质数</strong>。</p>
+<p><img alt="image-20240321124850642" src="../img/image-20240321124850642.png" /></p>
 <h3 id="_5">朴素筛<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>利用的原理是 <strong>任意整数 <span class="arithmatex">\(x\)</span> 的倍数 <span class="arithmatex">\(2x,3x,…\)</span> 等都不是质数</strong> 。从小到大进行枚举，每枚举一个数，就将整个数列中该数的倍数筛去，最终剩下的数就是质数。</p>
 <p>时间复杂度：<span class="arithmatex">\(O(n\log n)\)</span> </p>
@@ -3340,7 +3365,7 @@
 <p>注意到：此处对于每一个数，我们都枚举一遍它的倍数，将其筛除，如此存在着许多重复筛除的情况，降低了算法效率。</p>
 </blockquote>
 <h3 id="_6">埃氏筛<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>由于合数都是质数的倍数，因此我们只需要从小到大枚举<strong>质数</strong>时，将该质数的所有倍数删除即可。</p>
+<p>由于合数都是质数的倍数，因此我们只需要从小到大枚举<strong>质数</strong>时，将该质数的所有倍数删除即可。只需用到不超过 <span class="arithmatex">\(\sqrt{n}\)</span> 个质数，即可筛除 <span class="arithmatex">\(1\sim n\)</span> 内的所有合数。</p>
 <p>时间复杂度为 <span class="arithmatex">\(O(n \log\log n)\)</span>，近似为 <span class="arithmatex">\(O(n)\)</span>。</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -3451,7 +3476,16 @@
 <a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="_8">分解质因数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>合数一定可以分解为质数的乘积。</p>
+<p>质数十分特别，它们无法再进行分解，作为基本成分，可以“组成”任何一个大于 1 的正整数。</p>
+<div class="admonition 算术基本定理">
+<p class="admonition-title">算术基本定理</p>
+<p>任意一个大于 <span class="arithmatex">\(1\)</span> 的整数 <span class="arithmatex">\(N\)</span> 都可分解为：</p>
+<div class="arithmatex">\[
+N = p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}
+\]</div>
+<p>其中 <span class="arithmatex">\(p_i\)</span> 是两两不相同的质数，<span class="arithmatex">\(\alpha_i\)</span> 是该质数的重数。</p>
+<p>在不计次序的意义下，该分解式是<strong>唯一的</strong>。</p>
+</div>
 <h3 id="_9">暴力<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>从小到大枚举所有数，若数 <span class="arithmatex">\(i\)</span> 是 <span class="arithmatex">\(x\)</span> 的因数，由于是从小到大枚举，因此此时 <span class="arithmatex">\(i\)</span> 也一定是质数，即此时 <span class="arithmatex">\(i\)</span> 即为 <span class="arithmatex">\(x\)</span> 的一个质因数，再求出 <span class="arithmatex">\(x\)</span> 中因数 <span class="arithmatex">\(i\)</span> 存在多少次。</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
