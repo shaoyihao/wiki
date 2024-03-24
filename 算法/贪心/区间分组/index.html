@@ -2951,7 +2951,7 @@
 <p>将所有区间按照<strong>左端点</strong>从小到大排序</p>
 </li>
 <li>
-<p>按序依次处理每个区间，判断该区间 <span class="arithmatex">\([l,r]\)</span> 能否加入到之前的某组 <span class="arithmatex">\(i\)</span> 中。</p>
+<p>按序依次处理每个区间，判断该区间 <span class="arithmatex">\([l,r]\)</span> 能否加入到之前的某组 <span class="arithmatex">\(i\)</span> 中（<span class="arithmatex">\(l\ge l_i\)</span>）。</p>
 <p>判断方法为：求出第 <span class="arithmatex">\(i\)</span> 组中所有区间的右端点的最大值 <span class="arithmatex">\(r_{i\max}\)</span></p>
 <ul>
 <li>若 <span class="arithmatex">\(r_{i\max}&lt; l\)</span>，说明该区间与第 <span class="arithmatex">\(i\)</span> 组中所有区间都没有交集，可以将该区间加入到该组中。</li>
